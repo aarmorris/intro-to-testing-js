@@ -14,9 +14,19 @@ describe('helloWorld', function() {
     });
 });
 
-describe("helloWorld", function(){
-    it('should be defined function', function(){
-        expect(typeof helloWorld()).toBe("string");
+describe("sayHello", function() {
+    it('should be defined function', function () {
+        expect(typeof sayHello()).toBe("string");
     })
 
-})
+    it('should return the string Hello, Jane!', function () {
+        expect(sayHello("Jane")).toBe("Hello, Jane!");
+    })
+    it('should return the string Hello, Alex!', function () {
+        expect(sayHello("Alex!")).toBe("Hello, Alex!");
+    })
+    it(' should return the string Hello, Pat!', function (){
+        expect(sayHello("Pat!")).toBe("Hello, Pat!")
+    })
+
+});
